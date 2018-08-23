@@ -1,0 +1,26 @@
+{
+  "name": "timetable",
+  "version": "1.0.0",
+  "description": "Реализация приложения, отображающего табло аэропорта, с использованием API Яндекс.Расписаний.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glevanov/timetable.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glevanov/timetable/issues"
+  },
+  "homepage": "https://github.com/glevanov/timetable#readme",
+  "devDependencies": {
+    "browser-sync": "2.24.6",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "5.0.0",
+    "gulp-concat": "2.6.1",
+    "gulp-cssnano": "2.1.3"
+  }
+}
