@@ -6,4 +6,7 @@
     Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue,
     sans-serif;
+
+    background-color: hsl(0, 100%, 100%);
+    color: hsl(0, 100%, 0%);
 }
