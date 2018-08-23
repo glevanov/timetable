@@ -8,25 +8,26 @@
 <body class="page">
 <div class="app">
     <header class="header">
-        <h1 class="header--title">Расписание рейсов</h1>
+        <h1 class="header__title">Расписание рейсов</h1>
     </header>
 
     <main class="main">
-        <form action="">
-            <input class="search--input" type="text" id="search">
+        <form class="search">
+            <input class="search__input" type="text" id="search">
             <label for="search"></label>
+            <button class="search__submit" type="submit">Поиск</button>
         </form>
 
         <h2>Фильтр рейсов:</h2>
         <ul class="menu">
-            <li class="menu--item">Вылет</li>
-            <li class="menu--item">Прилет</li>
-            <li class="menu--item">Задержанные</li>
+            <li class="menu__item">Вылет</li>
+            <li class="menu__item">Прилет</li>
+            <li class="menu__item">Задержанные</li>
         </ul>
 
         <ul class="flights">
-            <li class="flights--item">Рейс 1</li>
-            <li class="flights--item">Рейс 2</li>
+            <li class="flights__item">Рейс 1</li>
+            <li class="flights__item">Рейс 2</li>
         </ul>
     </main>
 
