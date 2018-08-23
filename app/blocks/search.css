@@ -5,17 +5,21 @@
 
 .search__input {
     width: 100%;
-    border: 2px solid hsl(0, 0%, 28%);
+    border: 2px solid hsl(0, 0%, 100%);
+    border-radius: 5px;
     outline: none;
+
+    color: hsl(0, 0%, 100%);
+    background-color: hsla(0, 0%, 100%, 0.3);
 
     font-family: inherit;
     font-size: 30px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .search__input:focus {
-    box-shadow: 0 0 7px rgb(122, 204, 233);
+    box-shadow: 0 0 15px hsl(0, 0%, 100%);
 }
 
 
@@ -23,13 +27,21 @@
     font-family: inherit;
     font-size: 32px;
 
+    color: hsl(0, 0%, 100%);
     background-color: transparent;
+    outline: none;
 
-    border: 1px solid hsl(0, 100%, 0%);
-    padding-top: 0px;
+    border: 2px solid hsl(0, 100%, 100%);
+    border-radius: 5px;
+
+    padding-top: 0;
     padding-bottom: 5px;
     padding-left: 15px;
     padding-right: 15px;
-    border-radius: 8px;
     margin-left: 15px;
+}
+
+.search__submit:hover,
+.search__submit:focus {
+    box-shadow: 0 0 15px hsl(0, 0%, 100%);
 }

@@ -6,11 +6,16 @@
 
 .flights__item {
     font-size: 32px;
-    padding-bottom: 20px;
+
+    padding-bottom: 25px;
 }
 
 .flights__time {
     font-weight: 700;
+    color: hsl(236, 100%, 51%);
+
+    display: inline-block;
+    min-width: 120px;
 }
 
 .flights__city {
@@ -19,6 +24,9 @@
 
 .flights__id {
     font-size: 26px;
+
+    display: inline-block;
+    min-width: 120px;
 }
 
 .flights__status {

@@ -8,27 +8,61 @@
 <body class="page">
 <div class="app">
     <header class="header">
-        <h1 class="header__title">Расписание рейсов</h1>
+        <div class="wrapper">
+            <h1 class="header__title">Расписание рейсов</h1>
+
+            <form class="search">
+                <input class="search__input" type="text" id="search">
+                <label for="search"></label>
+                <button class="search__submit" type="submit">Найти</button>
+            </form>
+
+            <section class="menu">
+                <h2 class="menu__heading">Фильтр рейсов:</h2>
+                <ul class="menu__list">
+                    <li class="menu__item menu__item_active">
+                        <a href="#">Все</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#">Вылет</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#">Прилет</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#">Задержанные</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </header>
 
-    <main class="main">
-        <form class="search">
-            <input class="search__input" type="text" id="search">
-            <label for="search"></label>
-            <button class="search__submit" type="submit">Найти</button>
-        </form>
-
-        <section class="menu">
-            <h2 class="menu__heading">Фильтр рейсов:</h2>
-            <ul class="menu__list">
-                <li class="menu__item menu__item_active">Все</li>
-                <li class="menu__item">Вылет</li>
-                <li class="menu__item">Прилет</li>
-                <li class="menu__item">Задержанные</li>
-            </ul>
-        </section>
-
+    <main class="main wrapper">
         <ul class="flights">
+            <li class="flights__item">
+            <div>
+                <span class="flights__time">20:00</span>
+                <span class="flights__city">Вена</span>
+            </div>
+            <span class="flights__id">SU 2354</span>
+            <span class="flights__status">в полёте</span>
+        </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Алушта</span>
+                </div>
+                <span class="flights__id">SU 2354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Порту</span>
+                </div>
+                <span class="flights__id">GX 354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
             <li class="flights__item">
                 <div>
                     <span class="flights__time">20:00</span>
@@ -43,6 +77,142 @@
                     <span class="flights__city">Алушта</span>
                 </div>
                 <span class="flights__id">SU 2354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Порту</span>
+                </div>
+                <span class="flights__id">GX 354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Вена</span>
+                </div>
+                <span class="flights__id">SU 2354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Алушта</span>
+                </div>
+                <span class="flights__id">SU 2354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Порту</span>
+                </div>
+                <span class="flights__id">GX 354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Вена</span>
+                </div>
+                <span class="flights__id">SU 2354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Алушта</span>
+                </div>
+                <span class="flights__id">SU 2354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Порту</span>
+                </div>
+                <span class="flights__id">GX 354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Порту</span>
+                </div>
+                <span class="flights__id">GX 354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Вена</span>
+                </div>
+                <span class="flights__id">SU 2354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Алушта</span>
+                </div>
+                <span class="flights__id">SU 2354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Порту</span>
+                </div>
+                <span class="flights__id">GX 354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Вена</span>
+                </div>
+                <span class="flights__id">SU 2354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Алушта</span>
+                </div>
+                <span class="flights__id">SU 2354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Порту</span>
+                </div>
+                <span class="flights__id">GX 354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Вена</span>
+                </div>
+                <span class="flights__id">SU 2354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Алушта</span>
+                </div>
+                <span class="flights__id">SU 2354</span>
+                <span class="flights__status">в полёте</span>
+            </li>
+            <li class="flights__item">
+                <div>
+                    <span class="flights__time">20:00</span>
+                    <span class="flights__city">Порту</span>
+                </div>
+                <span class="flights__id">GX 354</span>
                 <span class="flights__status">в полёте</span>
             </li>
         </ul>
