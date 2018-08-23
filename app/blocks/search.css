@@ -1,8 +1,3 @@
-.search {
-    display: flex;
-    justify-content: space-between;
-}
-
 .search__input {
     width: 100%;
     border: 2px solid hsl(0, 0%, 100%);
@@ -44,4 +39,12 @@
 .search__submit:hover,
 .search__submit:focus {
     box-shadow: 0 0 15px hsl(0, 0%, 100%);
+}
+
+.search__subheading {
+    margin: 0;
+    width: 100%;
+
+    font-size: 20px;
+    color: hsla(0, 0%, 100%, 0.7)
 }
