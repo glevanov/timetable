@@ -4,7 +4,6 @@ const concat = require('gulp-concat');
 const cssnano = require('gulp-cssnano');
 const browserSync = require('browser-sync').create();
 
-
 gulp.task('styles', function() {
   return gulp.src('app/blocks/**/*.+(css)')
     .pipe(concat('style.css'))
@@ -25,6 +24,7 @@ gulp.task('browserSync', function() {
 })
 
 gulp.task('watch', ['browserSync'], function() {
-  gulp.watch('app/blocks/**/*.+(css)', ['styles']);
+  gulp.watch('app/blocks/**/*.css', ['styles']);
   gulp.watch('*.html', browserSync.reload);
+  gulp.watch('app/**/*.js', browserSync.reload);
 });
