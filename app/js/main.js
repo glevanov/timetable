@@ -1,1 +1,3 @@
-console.log(`Hello there!`)
+import data from './data.js';
+
+console.log(data.arrivals);
