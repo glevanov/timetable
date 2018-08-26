@@ -1,6 +1,4 @@
-import data from './data.js';
-import {status, flightList} from './template.js';
+import {updateFlightsTable, updateStatus} from './util.js'
 
-console.log(data);
-console.log(status);
-console.log(flightList);
+updateStatus();
+updateFlightsTable();
