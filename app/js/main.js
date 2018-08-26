@@ -1,5 +1,5 @@
-import {updateFlightsTable, updateStatus, updateCurrentData} from './util.js';
+import { updateFlightsTable, updateStatus, updateCurrentData } from './util.js'
 
-updateCurrentData();
-updateStatus();
-updateFlightsTable();
+updateCurrentData()
+updateStatus()
+updateFlightsTable()

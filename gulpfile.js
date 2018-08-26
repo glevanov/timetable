@@ -1,10 +1,10 @@
-const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
-const concat = require('gulp-concat');
-const cssnano = require('gulp-cssnano');
-const browserSync = require('browser-sync').create();
+const gulp = require('gulp')
+const autoprefixer = require('gulp-autoprefixer')
+const concat = require('gulp-concat')
+const cssnano = require('gulp-cssnano')
+const browserSync = require('browser-sync').create()
 
-gulp.task('styles', function() {
+gulp.task('styles', function () {
   return gulp.src('app/blocks/**/*.+(css)')
     .pipe(concat('style.css'))
     .pipe(autoprefixer())
@@ -13,9 +13,9 @@ gulp.task('styles', function() {
     .pipe(browserSync.reload({
       stream: true
     }))
-});
+})
 
-gulp.task('browserSync', function() {
+gulp.task('browserSync', function () {
   browserSync.init({
     server: {
       baseDir: './'
@@ -23,8 +23,8 @@ gulp.task('browserSync', function() {
   })
 })
 
-gulp.task('watch', ['browserSync'], function() {
-  gulp.watch('app/blocks/**/*.css', ['styles']);
-  gulp.watch('*.html', browserSync.reload);
-  gulp.watch('app/**/*.js', browserSync.reload);
-});
+gulp.task('watch', ['browserSync'], function () {
+  gulp.watch('app/blocks/**/*.css', ['styles'])
+  gulp.watch('*.html', browserSync.reload)
+  gulp.watch('app/**/*.js', browserSync.reload)
+})

@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Табло аэропорта</title>
-    <link href="style.css" rel="stylesheet">
-    <script type="module" src="app/js/main.js"></script>
+  <meta charset="UTF-8">
+  <title>Табло аэропорта</title>
+  <link href="style.css" rel="stylesheet">
+  <script type="module" src="app/js/main.js"></script>
 </head>
 <body class="page">
 <div class="app">
-    <header class="header">
-        <div class="wrapper">
-            <h1 class="header__title">Расписание рейсов</h1>
-            <form class="search">
-                <div class="wrapper_search"><input class="search__input" type="text" id="search">
-                    <label for="search"></label>
-                    <button class="search__submit" type="submit">Найти</button>
-                </div>
-                <p class="search__subheading">Поиск по номеру рейса</p>
-            </form>
-            <section class="filter">
-                <p class="filter__status"></p>
-
-                <ul class="filter__list wrapper_filter">
-                    <li class="filter__item"><a href="#">показать прилёт</a></li>
-                    <li class="filter__item"><a href="#">скрыть задержанные</a></li>
-                </ul>
-            </section>
+  <header class="header">
+    <div class="wrapper">
+      <h1 class="header__title">Расписание рейсов</h1>
+      <form class="search">
+        <div class="wrapper_search"><input class="search__input" type="text" id="search">
+          <label for="search"></label>
+          <button class="search__submit" type="submit">Найти</button>
         </div>
-    </header>
+        <p class="search__subheading">Поиск по номеру рейса</p>
+      </form>
+      <section class="filter">
+        <p class="filter__status"></p>
 
-    <main class="main wrapper">
-        <ul class="flights">
+        <ul class="filter__list wrapper_filter">
+          <li class="filter__item"><a href="#">показать прилёт</a></li>
+          <li class="filter__item"><a href="#">скрыть задержанные</a></li>
         </ul>
-    </main>
+      </section>
+    </div>
+  </header>
+
+  <main class="main wrapper">
+    <ul class="flights">
+    </ul>
+  </main>
 </div>
 </body>
 </html>

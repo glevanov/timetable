@@ -1,29 +1,29 @@
 .filter {
-    color: hsl(0, 100%, 100%);
-    font-size: 32px;
+  color: hsl(0, 100%, 100%);
+  font-size: 32px;
 }
 
 .filter__status {
-    margin: 0;
-    padding-top: 10px;
+  margin: 0;
+  padding-top: 10px;
 }
 
 .filter__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: 26px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 26px;
 }
 
 .filter__item {
-    background-color: transparent;
-    margin-right: 20px;
+  background-color: transparent;
+  margin-right: 20px;
 }
 
 .filter__item a {
-    display: block;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
-    color: inherit;
+  color: inherit;
 }
