@@ -23,8 +23,8 @@ export const updateFlightsTable = () => {
   main.replaceChild(updatedList, listElement)
 }
 
-const getDelayedOnly = (arr) => {
-  return arr.filter(it => it.status === `Задержан`)
+const getDelayedOnly = (data) => {
+  return getDataForDirection(data).filter(it => it.status === `Задержан`)
 }
 
 const getDataForDirection = (data) => {
@@ -34,7 +34,7 @@ const getDataForDirection = (data) => {
 export const updateCurrentData = (data) => {
   let updatedData;
   (config.SHOW_DELAYED)
-    ? updatedData = getDelayedOnly(getDataForDirection(data))
+    ? updatedData = getDelayedOnly(data)
     : updatedData = getDataForDirection(data)
 
   config.currentData = updatedData.slice(0, config.MAX_FLIGHT_ENTRIES)
