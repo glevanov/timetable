@@ -1,4 +1,3 @@
-import data from './data.js'
 import config from './config.js'
 import { getStatusElement, getFlightsElement } from './template.js'
 
@@ -24,10 +23,19 @@ export const updateFlightsTable = () => {
   main.replaceChild(updatedList, listElement)
 }
 
-export const updateCurrentData = () => {
-  let updatedData = []
-  for (let i = 0; i < config.MAX_FLIGHT_ENTRIES; i++) {
-    updatedData.push(data[config.DIRECTION][i])
-  }
-  config.currentData = updatedData
+const getDelayedOnly = (arr) => {
+  return arr.filter(it => it.status === `Задержан`)
+}
+
+const getDataForDirection = (data) => {
+  return data[config.DIRECTION]
+}
+
+export const updateCurrentData = (data) => {
+  let updatedData;
+  (config.SHOW_DELAYED)
+    ? updatedData = getDelayedOnly(getDataForDirection(data))
+    : updatedData = getDataForDirection(data)
+
+  config.currentData = updatedData.slice(0, config.MAX_FLIGHT_ENTRIES)
 }
