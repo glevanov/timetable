@@ -16,26 +16,44 @@ export const updateStatus = () => {
   filterElement.replaceChild(updatedStatus, statusElement)
 }
 
-export const updateFlightsTable = () => {
+export const updateMainContents = (element) => {
   const main = app.querySelector(`.main`)
-  const listElement = main.querySelector(`.flights`)
-  const updatedList = getFlightsElement(config.currentData)
-  main.replaceChild(updatedList, listElement)
+  main.innerHTML = ``
+  main.insertAdjacentElement(`afterbegin`, element)
 }
 
-const getDelayedOnly = (data) => {
-  return getDataForDirection(data).filter(it => it.status === `Задержан`)
+const getDelayedData = (data) => {
+  return getDirectionData(data).filter(it => it.status === `Задержан`)
 }
 
-const getDataForDirection = (data) => {
+const getDirectionData = (data) => {
   return data[config.DIRECTION]
 }
 
 export const updateCurrentData = (data) => {
   let updatedData;
   (config.SHOW_DELAYED)
-    ? updatedData = getDelayedOnly(data)
-    : updatedData = getDataForDirection(data)
+    ? updatedData = getDelayedData(data)
+    : updatedData = getDirectionData(data)
 
   config.currentData = updatedData.slice(0, config.MAX_FLIGHT_ENTRIES)
+}
+
+// TODO запилить поиск уже
+export const getDataByID = (inputID, data) => {
+  return data.filter(it => it.id === inputID)
+}
+
+// TODO Вынести в отдельный модуль ссылки на дом мб?
+const directionButton = document.querySelector(`#direction`)
+const delayedButton = document.querySelector(`#delayed`)
+
+export const updateButtons = () => {
+  (config.DIRECTION === `departures`)
+    ? directionButton.innerText = `показать прилёт`
+    : directionButton.innerText = `показать вылет`;
+
+  (config.SHOW_DELAYED === true)
+    ? delayedButton.innerText = `скрыть задержанные`
+    : delayedButton.innerText = `показать задержанные`
 }

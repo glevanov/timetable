@@ -2,14 +2,14 @@ import config from './config.js'
 import { createElement } from './util.js'
 
 const STATUS_DICT = {
-  departures: `вылета`,
-  arrivals: `прилёта`,
-  true: `с учетом задержанных рейсов`,
-  false: `без учета задержанных рейсов`
+  departures: `вылет`,
+  arrivals: `прилёт`,
+  true: `, только задержанные`,
+  false: ``
 }
 
 const getStatusElement = () => {
-  const updatedStatus = `<p class="filter__status">Показываем табло ${STATUS_DICT[config.DIRECTION]} ${config.AIRPORT} ${STATUS_DICT[config.SHOW_DELAYED]}</p>`
+  const updatedStatus = `<p class="filter__status">${config.AIRPORT} — ${STATUS_DICT[config.DIRECTION]}${STATUS_DICT[config.SHOW_DELAYED]}</p>`
   return createElement(updatedStatus)
 }
 
