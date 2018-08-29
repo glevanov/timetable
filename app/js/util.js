@@ -1,5 +1,5 @@
 import config from './config.js'
-import { getStatusElement, getFlightsElement } from './template.js'
+import { getStatusElement } from './template.js'
 
 const app = document.querySelector(`.app`)
 
@@ -39,21 +39,6 @@ export const updateCurrentData = (data) => {
   config.currentData = updatedData.slice(0, config.MAX_FLIGHT_ENTRIES)
 }
 
-// TODO запилить поиск уже
 export const getDataByID = (inputID, data) => {
   return data.filter(it => it.id === inputID)
-}
-
-// TODO Вынести в отдельный модуль ссылки на дом мб?
-const directionButton = document.querySelector(`#direction`)
-const delayedButton = document.querySelector(`#delayed`)
-
-export const updateButtons = () => {
-  (config.DIRECTION === `departures`)
-    ? directionButton.innerText = `показать прилёт`
-    : directionButton.innerText = `показать вылет`;
-
-  (config.SHOW_DELAYED === true)
-    ? delayedButton.innerText = `скрыть задержанные`
-    : delayedButton.innerText = `показать задержанные`
 }
