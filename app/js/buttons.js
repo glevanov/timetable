@@ -6,6 +6,7 @@ import { getFlightsElement } from './template.js'
 const app = document.querySelector(`.app`)
 const directionButton = app.querySelector(`#direction`)
 const delayedButton = app.querySelector(`#delayed`)
+const refreshButton = app.querySelector(`#refresh`)
 
 const updateButtons = () => {
   (config.DIRECTION === `departures`)
@@ -44,11 +45,20 @@ const delayedButtonHandler = () => {
   updateControlsText()
 }
 
+const refreshButtonHandler = () => {
+  updateMainContents(
+    getFlightsElement(config.currentData)
+  )
+}
+
 export const initButtonHandlers = () => {
   directionButton.addEventListener(`click`, () => {
     directionButtonHandler()
   })
   delayedButton.addEventListener(`click`, () => {
     delayedButtonHandler()
+  })
+  refreshButton.addEventListener(`click`, () => {
+    refreshButtonHandler()
   })
 }
