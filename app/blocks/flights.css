@@ -34,3 +34,11 @@
 .flights__status {
   font-size: 26px;
 }
+
+.flights__error {
+  font-size: 32px;
+}
+
+.flights__flight-id {
+  font-weight: 700;
+}
