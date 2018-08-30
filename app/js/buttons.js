@@ -13,7 +13,7 @@ const updateButtons = () => {
     : directionButton.innerText = `показать вылет`;
 
   (config.SHOW_DELAYED === true)
-    ? delayedButton.innerText = `скрыть задержанные`
+    ? delayedButton.innerText = `показать все`
     : delayedButton.innerText = `показать задержанные`
 }
 
