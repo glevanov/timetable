@@ -10,3 +10,5 @@ updateStatus()
 updateMainContents(getFlightsElement(config.currentData))
 initSearchHandler()
 initButtonHandlers()
+
+import '../blocks/styles.css';
