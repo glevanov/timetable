@@ -1,5 +1,7 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CssoWebpackPlugin = require('csso-webpack-plugin').default;
+
 
 let conf = {
   entry: './src/js/main.js',
@@ -22,13 +24,26 @@ let conf = {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: 'css-loader'
+          use: [
+            {
+              loader: 'css-loader',
+              options : { importLoaders: 1 }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                ident: 'postcss',
+                plugins: () => [ require('autoprefixer')() ]
+              }
+            }
+          ]
         })
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin('styles.css')
+    new ExtractTextPlugin('styles.css'),
+    new CssoWebpackPlugin()
   ]
 };
 
