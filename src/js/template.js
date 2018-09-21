@@ -1,20 +1,22 @@
-import config from './config.js'
-import { createElement } from './util.js'
+import config from "./config.js";
+import { createElement } from "./util.js";
 
 const STATUS_DICT = {
   departures: `вылет`,
   arrivals: `прилёт`,
   true: `, только задержанные`,
   false: ``
-}
+};
 
 const getStatusElement = () => {
-  const updatedStatus = `<p class="filter__status">${config.AIRPORT} — ${STATUS_DICT[config.DIRECTION]}${STATUS_DICT[config.SHOW_DELAYED]}</p>`
-  return createElement(updatedStatus)
-}
+  const updatedStatus = `<p class="filter__status">${config.AIRPORT} — ${
+    STATUS_DICT[config.DIRECTION]
+  }${STATUS_DICT[config.SHOW_DELAYED]}</p>`;
+  return createElement(updatedStatus);
+};
 
-const getFlightsElement = (data) => {
-  let flightItems = ``
+const getFlightsElement = data => {
+  let flightItems = ``;
   for (let i = 0; i < data.length; i++) {
     flightItems += `\
         <li class="flights__item">
@@ -24,14 +26,14 @@ const getFlightsElement = (data) => {
         </div>
         <span class="flights__id">${data[i].id}</span>
         <span class="flights__status">${data[i].status}</span>
-        </li>`
+        </li>`;
   }
   const flightList = `\
     <ul class="flights">
         ${flightItems}
     </ul>
-    `
-  return createElement(flightList)
-}
+    `;
+  return createElement(flightList);
+};
 
-export { getStatusElement, getFlightsElement }
+export { getStatusElement, getFlightsElement };

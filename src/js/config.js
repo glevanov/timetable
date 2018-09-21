@@ -4,4 +4,4 @@ export default {
   DIRECTION: `departures`,
   SHOW_DELAYED: false,
   currentData: []
-}
+};
