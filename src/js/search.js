@@ -1,6 +1,7 @@
-import { updateMainContents, getDataByID, createElement } from "./util.js";
+import { updateMainContents, createElement } from "./util.js";
 import { getFlightsElement } from "./template.js";
 import config from "./config.js";
+import getDataByID from "./getDataByID";
 
 const searchForm = document.querySelector(`.search`);
 const searchInput = searchForm.querySelector(`.search__input`);

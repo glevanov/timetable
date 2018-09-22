@@ -5,7 +5,8 @@
   "main": "src/js/main.js",
   "scripts": {
     "build": "webpack --env=prod --color",
-    "start": "webpack-dev-server --env=dev --color --open"
+    "start": "webpack-dev-server --env=dev --color --open",
+    "test": "mocha --require babel-core/register"
   },
   "repository": {
     "type": "git",
@@ -22,12 +23,14 @@
     "babel-core": "6.26.3",
     "babel-loader": "7.x",
     "babel-preset-env": "1.7.0",
+    "chai": "^4.1.2",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "1.0.0",
     "csso-webpack-plugin": "1.0.0-beta.12",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
     "file-loader": "2.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "mocha": "^5.2.0",
     "path": "0.12.7",
     "postcss-loader": "3.0.0",
     "prettier": "1.14.3",
