@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Табло аэропорта</title>
+<link href="styles.css" rel="stylesheet"></head>
+<body class="page">
+<div class="app">
+  <header class="header">
+    <div class="wrapper">
+      <h1 class="header__title">Расписание рейсов</h1>
+      <form class="search">
+        <div class="wrapper_search">
+          <input class="search__input" type="text" id="search" autocomplete="off">
+          <button class="search__submit" type="submit">Найти</button>
+        </div>
+        <label class="search__subheading" for="search">Поиск по номеру рейса</label>
+      </form>
+      <section class="filter">
+        <h2 class="visually-hidden">Фильтр табло</h2>
+        <p class="filter__status"></p>
+
+        <ul class="filter__list wrapper_filter">
+          <li class="filter__item"><a href="#" id="direction">показать прилёт</a></li>
+          <li class="filter__item"><a href="#" id="refresh">обновить табло</a></li>
+          <li class="filter__item"><a href="#" id="delayed">показать задержанные</a></li>
+        </ul>
+      </section>
+    </div>
+  </header>
+
+  <main class="main wrapper">
+    <ul class="flights">
+    </ul>
+  </main>
+</div>
+<script type="text/javascript" src="main.js"></script></body>
+</html>
